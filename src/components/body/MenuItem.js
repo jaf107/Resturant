@@ -5,7 +5,7 @@ const MenuItem = props => {
     return(
         <div >
             <Card style= {{margin: "10px"}}>
-                <CardBody>
+                <CardBody style={{cursor: "pointer"}} onClick = {props.DishSelect}>
                     <CardImg 
                         width="100%" 
                         alt={props.name} 
@@ -13,8 +13,8 @@ const MenuItem = props => {
                         style = {{opacity:".6"}} />
                     <CardImgOverlay>
                         <CardTitle 
-                            style = {{color: "Black", cursor: "pointer"}}
-                            onClick = {props.DishSelect}
+                            style = {{color: "Black", size: '26 px'}}
+                            // onClick = {props.DishSelect}
                             //onClick = {() => props.onDishSelect(props.dish)} 
                         >
                                  {props.dish.name}
